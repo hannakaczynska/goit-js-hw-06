@@ -17,6 +17,5 @@ const gallery = document.querySelector('.gallery');
 console.log(gallery);
 
 for (const image of images) {
-   const hh =  
-  gallery.insertAdjacentHTML('afterbegin', "<li class="image"> ${hh} </li>");
+  const hh = gallery.insertAdjacentHTML('afterbegin', ``);
 }
