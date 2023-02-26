@@ -14,8 +14,18 @@ const images = [
 ];
 
 const gallery = document.querySelector('.gallery');
-console.log(gallery);
 
-for (const image of images) {
-  const hh = gallery.insertAdjacentHTML('afterbegin', ``);
-}
+const imageGallery = images
+  .map(
+    image =>
+      `<li><img class="gallery__image" src=${image.url} width = "300px" alt='${image.alt}'></img></li>`
+  )
+  .join('');
+
+gallery.insertAdjacentHTML('beforeend', imageGallery);
+
+gallery.style.display = 'flex';
+gallery.style.gap = '50px';
+gallery.style.listStyle = 'none';
+gallery.style.justifyContent = 'space-between';
+gallery.style.marginTop = '100px';
